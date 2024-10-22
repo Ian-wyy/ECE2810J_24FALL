@@ -6,6 +6,14 @@ using namespace std;
 
 // Function to partition the array and return the index of the pivot element
 int partition(vector<int>& arr, int low, int high, int pivot) {
+    int pivotindex = low;
+    for (int i = low; i <= high; i++) {
+        if (arr[i] == pivot) {
+            pivotindex = i;
+            break;
+        }
+    }
+    swap(arr[low], arr[pivotindex]);
     // int pivot = arr[low];
     int left = low + 1;
     int right = high;
@@ -36,19 +44,22 @@ int deterministicSelection(vector<int>& arr, int low, int high, int k) {
     if (low == high) {
         return arr[low];
     }
-
     int n = high - low + 1;
-
     // Divide the array into groups of size 5
     vector<int> medians;
-    for (int i = 0; i < n / 5; i++) {
+    for (int i = 0; i <= n / 5; i++) {
         int left = low + i * 5;
         int right = left + 4;
+        if (right > high) {
+            right = high;
+        }
         medians.push_back(findMedian(arr, left, right));
     }
 
     // Find the median of medians
-    int medianOfMedians = (medians.size() == 1) ? medians[0] : deterministicSelection(medians, 0, medians.size() - 1, medians.size() / 2);
+
+    //int medianOfMedians = findMedian(medians, 0, medians.size() - 1);
+    int medianOfMedians = deterministicSelection(medians, 0, medians.size() - 1, medians.size() / 2);
 
     // Partition the array based on the median of medians
     int pivotIndex = partition(arr, low, high, medianOfMedians);
