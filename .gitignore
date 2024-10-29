@@ -15,6 +15,8 @@
 
 !in_class_ex/Bloom_Filter/
 !in_class_ex/Bloom_Filter/*.cpp
+!in_class_ex/Bloom_Filter/answer/
+!in_class_ex/Bloom_Filter/answer/*.cpp
 
 !in_class_ex/Comparison\ Sort\ Exercise/
 !in_class_ex/Comparison\ Sort\ Exercise/c++/
