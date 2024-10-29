@@ -1,0 +1,16 @@
+################################
+## White list based gitignore ##
+################################
+
+# forbidden
+*
+.*
+
+# allowed
+!.gitignore
+!.gitattributes
+!.gitea/
+!Makefile
+!*.cpp
+!*.h
+!*.md
