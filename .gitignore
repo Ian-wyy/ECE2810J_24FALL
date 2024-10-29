@@ -9,8 +9,51 @@
 # allowed
 !.gitignore
 !.gitattributes
-!.gitea/
-!Makefile
-!*.cpp
-!*.h
-!*.md
+!README.md
+
+!in_class_ex/
+
+!in_class_ex/Bloom_Filter/
+!in_class_ex/Bloom_Filter/*.cpp
+
+!in_class_ex/Comparison\ Sort\ Exercise/
+!in_class_ex/Comparison\ Sort\ Exercise/c++/
+!in_class_ex/Comparison\ Sort\ Exercise/c++/*.cpp
+!in_class_ex/Comparison\ Sort\ Exercise/python/
+!in_class_ex/Comparison\ Sort\ Exercise/python/*.py
+!in_class_ex/Comparison\ Sort\ Exercise/answers/c++/
+!in_class_ex/Comparison\ Sort\ Exercise/answers/c++/*.cpp
+!in_class_ex/Comparison\ Sort\ Exercise/answers/python/
+!in_class_ex/Comparison\ Sort\ Exercise/answers/python/*.py
+
+!in_class_ex/Hashing\ Application/
+!in_class_ex/Hashing\ Application/*.cpp
+!in_class_ex/Hashing\ Application/answer/
+!in_class_ex/Hashing\ Application/answer/*.cpp
+
+!in_class_ex/Hashing_Exercise/
+!in_class_ex/Hashing_Exercise/*.cpp
+!in_class_ex/Hashing_Exercise/answers/
+!in_class_ex/Hashing_Exercise/answers/*.cpp
+
+!in_class_ex/Linear\ Time\ Selection\ Excercise/
+!in_class_ex/Linear\ Time\ Selection\ Excercise/c++/
+!in_class_ex/Linear\ Time\ Selection\ Excercise/c++/*.cpp
+!in_class_ex/Linear\ Time\ Selection\ Excercise/answers/c++/
+!in_class_ex/Linear\ Time\ Selection\ Excercise/answers/c++/*.cpp
+
+!in_class_ex/Non-Comparison\ Sort\ Exercise/
+!in_class_ex/Non-Comparison\ Sort\ Exercise/c++/
+!in_class_ex/Non-Comparison\ Sort\ Exercise/c++/*.cpp
+!in_class_ex/Non-Comparison\ Sort\ Exercise/answers/c++/
+!in_class_ex/Non-Comparison\ Sort\ Exercise/answers/c++/*.cpp
+
+!in_class_ex/debug_deterministicSelection.cpp
+
+!in_class_ex/hashing_conflict_resolution/
+!in_class_ex/hashing_conflict_resolution/*.cpp
+!in_class_ex/hashing_conflict_resolution/answer/
+!in_class_ex/hashing_conflict_resolution/answer/*.cpp
+
+.DS_Store
+
