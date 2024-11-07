@@ -57,5 +57,21 @@
 !in_class_ex/hashing_conflict_resolution/answer/
 !in_class_ex/hashing_conflict_resolution/answer/*.cpp
 
+!in_class_ex/Trees/
+!in_class_ex/Trees/*.cpp
+!in_class_ex/Trees/answer/
+!in_class_ex/Trees/answer/*.cpp
+
+!in_class_ex/heap/
+!in_class_ex/heap/*.cpp
+!in_class_ex/heap/answer/
+!in_class_ex/heap/answer/*.cpp
+
+
+!in_class_ex/Fibonacci_Heap/
+!in_class_ex/Fibonacci_Heap/*.cpp
+!in_class_ex/Fibonacci_Heap/answer/
+!in_class_ex/Fibonacci_Heap/answer/*.cpp
+
 .DS_Store
 
