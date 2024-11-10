@@ -14,9 +14,21 @@ public:
     }
 
     void add(const std::string& item) {
+        for (auto& func : hashFunctions) {
+            if (!bitArray[func(item) % size]) {
+             bitArray[func(item) % size] = true;
+            }
+        }
     }
 
     bool find(const std::string& item) {
+        for (auto& func : hashFunctions) {
+            size_t ind = func(item) % size;
+            if (!bitArray[ind]) {
+            return false;
+            }
+        }
+        return true;
     }
 
     double getFalsePositiveRate() {

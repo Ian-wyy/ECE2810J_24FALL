@@ -23,6 +23,15 @@ public:
     // Function to insert a value as a child of a parent node
     void insert(int parentValue, int value) {
         // write your code
+        TreeNode *parent = findNode(root, parentValue);
+        if (parent == nullptr) {
+            std::cout<<"No this parent node."<<std::endl;
+            return;
+        }
+        else {
+            TreeNode* t = new TreeNode(value);
+            parent->children.push_back(t);
+        }
     }
 
     // Function to search for a value in the tree
@@ -41,6 +50,19 @@ private:
     // Helper function to find a node with a specific value
     TreeNode* findNode(TreeNode* node, int value) {
         // write your code
+        if(node == nullptr){
+            return nullptr;
+        }
+        if(node->data == value){
+            return node;
+        }
+        for(auto& child : node->children){
+            TreeNode* n = findNode(child, value);
+            if(n != nullptr){
+                return n;
+            }
+        }
+        return nullptr;
     }
 
     // Helper function to remove a node with a specific value
