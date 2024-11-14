@@ -73,5 +73,10 @@
 !in_class_ex/Fibonacci_Heap/answer/
 !in_class_ex/Fibonacci_Heap/answer/*.cpp
 
+!in_class_ex/Binary_Search_Tree/
+!in_class_ex/Binary_Search_Tree/*.cpp
+!in_class_ex/Binary_Search_Tree/answer/
+!in_class_ex/Binary_Search_Tree/answer/*.cpp
+
 .DS_Store
 
