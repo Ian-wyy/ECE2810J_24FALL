@@ -83,5 +83,10 @@
 !in_class_ex/Additional_Binary_Search_Tree/answer/
 !in_class_ex/Additional_Binary_Search_Tree/answer/*.cpp
 
+!in_class_ex/AVL_Tree/
+!in_class_ex/AVL_Tree/*.cpp
+!in_class_ex/AVL_Tree/answer/
+!in_class_ex/AVL_Tree/answer/*.cpp
+
 .DS_Store
 
