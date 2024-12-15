@@ -55,6 +55,7 @@ private:
         node* n = new node(*median);
         n->left_subtree = buildTree(start, median, depth + 1);
         // implement your own line
+        n->right_subtree = buildTree(median, end, depth + 1);
         return n;
     }
 
@@ -70,6 +71,26 @@ private:
         int axis = depth % 2;
         
         // implement your own function
+
+        node* nextBranch = nullptr;
+        node* oppositeBranch = nullptr;
+        if ((axis == 0 && queryPoint.x < currentNode->key.x) || (axis == 1 && queryPoint.y < currentNode->key.y)) {
+            nextBranch = currentNode->left_subtree;
+            oppositeBranch = currentNode->right_subtree;
+        } else {
+            nextBranch = currentNode->right_subtree;
+            oppositeBranch = currentNode->left_subtree;
+        }
+
+        // Search the side where the query point is
+        nearestNeighborSearch(nextBranch, queryPoint, depth + 1, bestPoint, bestDist);
+
+        // Decide whether to search the opposite side
+        if (oppositeBranch != nullptr && ((axis == 0 && abs(queryPoint.x - currentNode->key.x) < bestDist) ||
+                                          (axis == 1 && abs(queryPoint.y - currentNode->key.y) < bestDist))) {
+            nearestNeighborSearch(oppositeBranch, queryPoint, depth + 1, bestPoint, bestDist);
+        }
+
     }
 
     static double distance(const Point2D& a, const Point2D& b) {
